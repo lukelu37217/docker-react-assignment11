@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Assignment 11 - Docker File: React Dev Environment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Student: Luke Lu
 
-## Available Scripts
+## Container Name
+`lu_luke_coding_assignment11`
 
-In the project directory, you can run:
+## Workdir
+`/Luke_Lu_site`
 
-### `npm start`
+## Description
+This project sets up a development environment using Docker. It runs a React application that displays a `<h1>` tag with the text:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```html
+<h1>Codin 1</h1>
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
+- Docker Desktop installed and running
+- Git installed (optional for clone)
 
-### `npm test`
+## How to Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**  
+   Or download this folder manually.
 
-### `npm run build`
+2. **Build the Docker image**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+docker build -t lu_luke_coding_assignment11 .
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the Docker container**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+docker run -p 7775:3000 --name lu_luke_coding_assignment11 lu_luke_coding_assignment11
+```
 
-### `npm run eject`
+4. **Open your browser and go to**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+http://localhost:7775
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You should see the page displaying:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```html
+<h1>Codin 1</h1>
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes
 
-## Learn More
+- React runs on port 3000 by default.
+- Docker maps host port 7775 to container port 3000 with `-p 7775:3000`
+- This satisfies the assignment requirement of running at `localhost:7775`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## GitHub Repo Link
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[https://github.com/lukelu37217/docker-react-assignment11](https://github.com/lukelu37217/docker-react-assignment11)
